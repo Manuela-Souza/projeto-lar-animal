@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/adocao.css">
+    <title>Página de Adoção</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI/t1sP66jibD6tnWjXs6pAId9DeN/6o7By9uuwM=" crossorigin="anonymous"></script>
+    <script src="js/adocao.js"></script>
+
+
+
+    <div id="cabecalho">
+        <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+                    <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                    Lar Animal
+                </a>
+                <label class="switch" title="Ativar Modo Escuro">
+                    <input id="modeToggle" type="checkbox">
+                    <span class="slider round"></span>
+                    <span id="modeText">Modo Claro</span><br>
+                </label>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                        <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                        <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                        <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+                    </div>
+                </div>
+            </div>          
+        </nav>
+    </div>
+
+
+    <!----------------Botão para novo Pet ----vai p/ modal-------------->
+    <div class="mb-1" style="color: #55038C; padding: 10px; font-size: small; text-align: center;">
+        <button type="button" class="btn" id="addPet" data-bs-toggle="modal" data-bs-target="#novoPetModal"
+            style="color: white; background-color:#038c23;">Adicionar Pet</button>
+    </div>
+
+    <div class="container" style="margin-bottom: 200px;">
+        <div id="Conteudo" class="row row-cols-1 row-cols-md-4 g-4 mb-1">
+            <!------------------------CARD--EXEMPLO--------------------------->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center" style="background-color: #F2AA52;">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#novoPetModal">
+                            <img src="https://static.wixstatic.com/media/e2e4ef_0b360155ffdd45858ac4204bdf67d053~mv2.jpeg/v1/fill/w_1200,h_1600,al_c,q_85/Zeus-cachorro_10.jpeg" class="img-thumbnail" style="width: 200px; height: 200px;">
+                        </a>
+                        <h5 class="card-title">Pet Exemplo</h5>
+                        <p class="card-text">Descrição do pet 1.</p>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalLabel"
+                            style="color: white; background-color:#55038C;">Mostrar
+                            mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Título do Modal</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p> Espécie/Raça: SRD</p>
+                      <p>  Idade: 5 Meses </p>
+                      <p>  Descrição: Achado na chuva, vacinado e vermifugado </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- Modal para adicionar novo Pet -->
+            <div class="modal fade" id="novoPetModal" tabindex="-1" aria-labelledby="novoPetModalLabel"
+                aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: #F2AA52;">
+                            <h5 class="modal-title" id="novoPetModalLabel">Novo Pet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="novoPetForm">
+                                <div class="mb-3">
+                                    <label for="petNome" class="form-label">Nome do Pet:</label>
+                                    <input type="text" class="form-control" id="petNome" required>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="petEspecie" class="form-label">Espécie/Raça:</label>
+                                        <input type="text" class="form-control" id="petEspecie" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="petIdade" class="form-label">Idade:</label>
+                                        <input type="text" class="form-control" id="petIdade" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="petImagem" class="form-label">Imagem do Pet:</label>
+                                    <input type="file" class="form-control" id="petImagem" accept="image/*">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="petDescricao" class="form-label">Descrição do Pet:</label>
+                                    <input type="text" class="form-control" id="petDescricao" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="donoEmail" class="form-label">Seu E-mail (Dono):</label>
+                                    <input type="text" class="form-control" id="donoEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="donoTelefone" class="form-label">Seu Telefone (Dono):</label>
+                                    <input type="text" class="form-control" id="donoTelefone" required>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="button" id=submitBtn class="btn mx-auto" style="background-color: #55038C; color: white;" onclick="salvarNovoPet()">
+                                        Salvar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal do Dono -->
+            <div class="modal fade mx-auto" id="DonoModal" tabindex="-1" aria-labelledby="DonoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: #F2AA52;">
+                            <h5 class="modal-title" id="DonoModalLabel">Detalhes do Dono</h5>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Para adotar esse pet ou saber mais sobre ele, entre em contato com o protetor:</h5>
+                            <p><strong style="color: #55038C;">E-mail do Dono:</strong> <span
+                                    id="modalDonoEmail"></span></p>
+                            <p><strong style="color: #55038C;">Telefone do Dono:</strong> <span
+                                    id="modalDonoTelefone"></span></p>
+                        </div>
+                        <div class="modal-footer" style="background-color: #F2AA52;">
+                            <button type="button" class="btn mx-auto" data-bs-dismiss="modal"
+                                style="background-color: #55038C; color: white;">
+                                Voltar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <footer
+        style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: fixed; bottom: 0; left: 0; right: 0;">
+
+        <div>
+
+            <p>Gostou do nosso serviço? Avalie-nos!</p>
+
+            <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a>
+
+            </span>
+
+            <div class="rodape">
+
+                <div class="container">
+
+                    <p>&copy; 2023 Lar animal - Todos os direitos reservados</p>
+
+                </div>
+
+    </footer>
+
+    <script>
+        const toggleSwitch = document.getElementById('modeToggle');
+        const modeText = document.getElementById('modeText');
+
+        toggleSwitch.addEventListener('change', switchTheme);
+
+        function switchTheme() {
+            if (toggleSwitch.checked) {
+                document.body.classList.add('dark-mode');
+                modeText.innerText = 'Modo Escuro';
+            } else {
+                document.body.classList.remove('dark-mode');
+                modeText.innerText = 'Modo Claro';
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/adocao.js"></script>
+</body>
+
+</html>

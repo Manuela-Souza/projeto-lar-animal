@@ -1,0 +1,267 @@
+/* dark mode */ 
+
+body { 
+
+    color: #000000; 
+
+} 
+
+
+.container { 
+
+    padding: 20px; 
+
+    text-align: center; 
+
+} 
+
+ 
+ 
+
+/* Estilos para o modo escuro */ 
+
+.dark-mode { 
+
+    background-color: #000000; 
+
+    color: #ffffff; 
+
+} 
+
+ 
+ 
+
+.dark-mode .container { 
+
+    border: 1px solid #ffffff; 
+
+} 
+
+ 
+ 
+
+/* Estilos para o botão de alternância */ 
+
+.switch { 
+
+    position: relative; 
+
+    display: inline-block; 
+
+    width: 50px; 
+
+    height: 25px; 
+
+} 
+
+ 
+ 
+
+.switch input { 
+
+    opacity: 0; 
+
+    width: 0; 
+
+    height: 0; 
+
+} 
+
+ 
+ 
+
+.slider { 
+
+    position: absolute; 
+
+    cursor: pointer; 
+
+    top: 0; 
+
+    left: 0; 
+
+    right: 0; 
+
+    bottom: 0; 
+
+    background-color: #ccc; 
+
+    transition: .4s; 
+
+    border-radius: 35px; 
+
+} 
+
+ 
+
+/* Estilos para os cards no modo escuro */
+.partner-card {
+    background-color: #333; /* Cor de fundo desejada no modo escuro para os cards */
+    color: #000000; /* Cor do texto desejada no modo escuro para os cards */
+}
+ 
+
+.slider:before { 
+
+    position: absolute; 
+
+    content: ""; 
+
+    height: 27px; 
+
+    width: 27px; 
+
+    left: 0px; 
+
+    background-color: rgb(255, 255, 255); 
+
+    transition: .4s; 
+
+    border-radius: 50%; 
+
+} 
+
+ 
+ 
+.dark-mode .modal-content {
+    background-color: #333; /* Cor de fundo do modal em modo escuro */
+    color: #fff; /* Cor do texto no modal em modo escuro */
+}
+ 
+
+input:checked+.slider { 
+
+    background-color: #55038C; 
+
+} 
+
+ 
+ 
+
+input:checked+.slider:before { 
+
+    transform: translateX(26px); 
+
+} 
+
+ 
+ 
+
+/* dark mode */ 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #55038C;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.partner-card {
+    border: 1px solid #55038C;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.partner-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.partner-button {
+    background-color: #55038C;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+}
+
+#map {
+    height: 500px; /* Ajuste a altura conforme necessário */
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+nav {
+    background-color: #F2AA52;
+    color: #55038C;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-brand {
+    color: #55038C;
+}
+
+.navbar-toggler-icon {
+    background-color: #55038C;
+}
+
+.navbar-nav a {
+    color: #55038C;
+}
+
+.navbar-nav a:hover {
+    color: rgb(213, 229, 242);
+}
+
+#botao-avaliacao { 
+
+    background-color: #55038C; 
+
+    border: 1px solid #ffffff;  
+
+    color: #ffffff;  
+
+    padding: 10px 25px; 
+
+    text-align: center; 
+
+    display: inline-block; 
+
+    margin: 8px 4px;  
+
+    cursor: pointer; 
+
+    text-decoration: none; 
+
+    font-size: 15px; 
+
+} 
+
+ 
+ 
+ 
+
+#botao-avaliacao:hover { 
+
+    background-color: #d8a76c; 
+
+} 

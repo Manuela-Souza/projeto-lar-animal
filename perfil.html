@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style_usuario.css">
+    <title>Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+    </script>
+
+
+
+<div id="cabecalho">
+    <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+                <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                Lar Animal
+            </a>
+            <label class="switch" title="Ativar Modo Escuro">
+                <input id="modeToggle" type="checkbox">
+                <span class="slider round"></span>
+                <span id="modeText">Modo Claro</span><br>
+            </label>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                    <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                    <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                    <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+                </div>
+            </div>
+        </div>          
+    </nav>
+</div>
+
+
+<header>
+    <h1>Perfil do Usuário</h1>
+</header>
+
+<main class="perfil-container">
+    <section class="user-info">
+        <h2>Dados do Usuário</h2>
+        <div class="user-details">
+            <p><strong>Nome:</strong> João da Silva</p>
+            <p><strong>E-mail:</strong> joao@example.com</p>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+            <p><strong>Endereço:</strong> Rua Exemplo, 123</p>
+        </div>
+    </section>
+
+    <div class="agendamentos-container">
+     
+
+        <h2>Consultas Marcadas</h2>
+ 
+        </div>
+    </section>
+
+    <section class="pets-cadastrados">
+        <h2>Pets Cadastrados</h2>
+        <div class="pet-item">
+            <img src="img/2wh95tje.png" alt="Pet 1">
+            <h3>Tobby</h3>
+            <p><strong>Espécie:</strong> Cachorro</p>
+            <p><strong>Idade:</strong> 2 anos</p>
+        </div>
+    </section>
+    <section class="pets-cadastrados">
+        <h2>Pets Cadastrados</h2>
+        <div class="pet-item">
+            <img src="img/2wh95tje.png" alt="Pet 1">
+            <h3>Tobby</h3>
+            <p><strong>Espécie:</strong> Cachorro</p>
+            <p><strong>Idade:</strong> 2 anos</p>
+        </div>
+    </section>
+</main>
+
+
+
+    <footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: relative; bottom: 0; left: 0; right: 0;"> 
+
+        <div> 
+    
+            <p>Gostou do nosso serviço? Avalie-nos!</p> 
+    
+                <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
+    
+                </span> 
+    
+                <div class="rodape"> 
+    
+                <div class="container"> 
+    
+                <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
+    
+        </div> 
+    
+    </footer> 
+    <script>
+        const toggleSwitch = document.getElementById('modeToggle');
+        const modeText = document.getElementById('modeText');
+    
+        toggleSwitch.addEventListener('change', switchTheme);
+    
+        function switchTheme() {
+            if (toggleSwitch.checked) {
+                document.body.classList.add('dark-mode');
+                modeText.innerText = 'Modo Escuro';
+            } else {
+                document.body.classList.remove('dark-mode');
+                modeText.innerText = 'Modo Claro';
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+  function carregarAgendamentos() {
+    // Simulando a requisição do arquivo JSON (você deve adaptar para o carregamento real)
+    const dados = {
+      "agendamentos": [
+        {
+          "clinicName": "Terra Dos Bichos",
+          "appointmentDate": "2023-12-13",
+          "appointmentTime": "22:40",
+          "id": 1
+        },
+        {
+          "clinicName": "Climev",
+          "appointmentDate": "2023-12-12",
+          "appointmentTime": "23:40",
+          "id": 2
+        }
+      ]
+    };
+
+    const agendamentos = dados.agendamentos;
+
+    const $agendamentosContainer = document.querySelector('.agendamentos-container');
+
+    if (agendamentos.length > 0) {
+      agendamentos.forEach(function(consulta) {
+        const consultaHTML = `
+          <div class="consulta-item">
+            <h2>Consulta Agendada</h2>
+            <p><strong>Clínica:</strong> ${consulta.clinicName}</p>
+            <p><strong>Data:</strong> ${consulta.appointmentDate}</p>
+            <p><strong>Hora:</strong> ${consulta.appointmentTime}</p>
+          </div>
+        `;
+        $agendamentosContainer.insertAdjacentHTML('beforeend', consultaHTML);
+      });
+    } else {
+      $agendamentosContainer.innerHTML = '<p>Não existem agendamentos no momento.</p>';
+    }
+  }
+
+  carregarAgendamentos();
+});
+    </script>
+</body>
+
+</html>

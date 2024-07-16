@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Parceiros</title>
+    <link rel="stylesheet" href="style/parceiros.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+
+    <!-- Mapbox GL JS CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Mapbox GL JS Script -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <!-- Geocoder -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+        type="text/css">
+</head>
+
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+
+<div id="cabecalho">
+    <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+                <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                Lar Animal
+            </a>
+            <label class="switch" title="Ativar Modo Escuro">
+                <input id="modeToggle" type="checkbox">
+                <span class="slider round"></span>
+                <span id="modeText">Modo Claro</span><br>
+            </label>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                    <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                    <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                    <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+                </div>
+            </div>
+        </div>          
+    </nav>
+</div>
+
+
+    <header class="text-center py-4">
+        <h1>Gerenciamento de Parceiros</h1>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Parceiros Cards -->
+        <div class="row">
+            <!-- Parceiros Cards -->
+            <div class="col-md-4 mb-4">
+                <div class="partner-card">
+                   
+                    <h3>Distribuidora Expedito</h3>
+                    <p>Av. Fernão Dias, 689 - Jardim Laguna</p>
+                    <p> (31) 3665-9159</p>
+                    <a href="javascript:void(0);" class="partner-button"
+                        onclick="centerMap([-44.0333, -19.8940])">Ver no Mapa</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="partner-card">
+                    
+                    <h3>Oasis</h3>
+                    <p>R. São Matias, 175 - Serrano</p>
+                    <p>(31) 3476-5545</p>
+                    <a href="javascript:void(0);" class="partner-button"
+                        onclick="centerMap([-44.01273523426857, -19.881384537445967])">Ver no Mapa</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="partner-card">
+                    
+                    <h3>Mercadinho Animal</h3>
+                    <p> Av. Fernão Dias, 1390 - Jardim Laguna</p>
+                    <p>(31) 3393-8413</p>
+                    <a href="javascript:void(0);" class="partner-button"
+                        onclick="centerMap([-44.028111303357306, -19.898908586763184])">Ver no Mapa</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZWxkZXJsdWlzMCIsImEiOiJjbHBzejNlb2swNnc4MmtycHFiNDFvYm8zIn0.9l1Pbo7kzS9VFq3-4VQhWw';
+
+        function centerMap(coordinates) {
+            map.flyTo({
+                center: coordinates,
+                zoom: 12
+            });
+        }
+
+        var partnerCoordinates = {
+            'Parceiro 1': [-44.0333, -19.8940],
+            'Parceiro 2': [-44.01273523426857, -19.881384537445967],
+            'Parceiro 3': [-44.028111303357306, -19.898908586763184],
+        }
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: partnerCoordinates['Parceiro 1'],
+            zoom: 10
+        });
+
+        Object.keys(partnerCoordinates).forEach(function (partner) {
+            new mapboxgl.Marker()
+                .setLngLat(partnerCoordinates[partner])
+                .addTo(map);
+        });
+
+        var geocoder = new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        });
+
+        document.getElementById('map').appendChild(geocoder.onAdd(map));
+    </script>
+
+    <!-- Footer -->
+    <footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: relative; bottom: 0; left: 0; right: 0;"> 
+
+        <div> 
+    
+            <p>Gostou do nosso serviço? Avalie-nos!</p> 
+    
+                <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
+    
+                </span> 
+    
+                <div class="rodape"> 
+    
+                <div class="container"> 
+    
+                <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
+    
+        </div> 
+    
+    </footer>  
+
+<!-- Bootstrap JS e Popper.js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofGJopfMz+CUqGFeJeg8P5U/C83L2xK++I" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-Q6HhaS3zCHmP+R+9x1t24N6Kh3E6H4OCn8orofH/zKDFmeAXMU2ZZlLK8GRByV3B" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-EeUQhFDTt10jNM2ZR5NO1AZVWgMfN6ZDiprNp1aEtKT0pAdsz1i5oZJ0RFkLb8Jw" crossorigin="anonymous"></script>
+</script>
+<script>
+    const toggleSwitch = document.getElementById('modeToggle');
+    const modeText = document.getElementById('modeText');
+
+    toggleSwitch.addEventListener('change', switchTheme);
+
+    function switchTheme() {
+        if (toggleSwitch.checked) {
+            document.body.classList.add('dark-mode');
+            modeText.innerText = 'Modo Escuro';
+        } else {
+            document.body.classList.remove('dark-mode');
+            modeText.innerText = 'Modo Claro';
+        }
+    }
+</script>
+</body>
+
+</html>

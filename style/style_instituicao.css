@@ -1,0 +1,189 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#cabecalho {
+    background-color: black;
+    width: 100%;
+}
+
+.barrasup {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2AA52;
+    color: #55038C;
+    margin: 0 auto;
+    padding: 0px 10%;
+}
+
+.barramenu {
+    display: flex;
+    list-style: none;
+
+}
+
+.barramenu a {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+.barramenu a:hover {
+    color: rgb(213, 229, 242);
+}
+
+#conteudo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin: 20px auto;
+    padding: 0 10%;
+    width: 100%;
+}
+
+#barralat {
+    display: block;
+    grid-column: 1 /2;
+    grid-row: 1 3;
+}
+
+
+
+
+.sideMenu {
+    display: block;
+    border: 2px solid #F2AA52;
+    padding: 10px;
+    grid-row: 1 / 3;
+}
+
+.sideMenu li {
+    border: 2px solid #F2AA52;
+    padding: 10px;
+    grid-template-rows: repeat(3, 1fr);
+
+
+}
+
+.sideMenu li a {
+    color: #55038C;
+}
+
+.sideMenu li a:hover {
+    color: #55038C;
+}
+
+.carrousel {
+    display: grid;
+    grid-column: 2 / 5;
+}
+
+.carrousel img {
+    width: 100%;
+    border: 1px solid #F2AA52;
+}
+
+
+.card {
+    display: inline-block;
+    width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+    border: 1px solid #F2AA52;
+
+}
+
+.card p {
+    padding: 0px 15p;
+    margin: 10px;
+    text-align: justify;
+
+}
+
+.card_img {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+}
+
+.item {
+    font-size: 1.3rem;
+    color: black;
+}
+
+#botao-avaliacao { 
+
+    background-color: #55038C; 
+
+    border: 1px solid #ffffff;  
+
+    color: #ffffff;  
+
+    padding: 10px 25px; 
+
+    text-align: center; 
+
+    display: inline-block; 
+
+    margin: 8px 4px;  
+
+    cursor: pointer; 
+
+    text-decoration: none; 
+
+    font-size: 15px; 
+
+} 
+
+ 
+ 
+ 
+
+#botao-avaliacao:hover { 
+
+    background-color: #d8a76c; 
+
+} 
+
+@media screen and (min-width: 320px) and (max-width: 945px) {
+
+    .carrousel,
+    .cardsection {
+        display: block;
+        grid-row: auto;
+        grid-column: 1 / 2;
+    }
+
+    #barralat {
+        grid-row: 1 / 2;
+
+    }
+
+    #conteudo {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .barramenu {
+        font-size: 9pt;
+    }
+
+
+}

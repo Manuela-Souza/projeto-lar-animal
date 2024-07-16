@@ -1,0 +1,272 @@
+/* dark mode */ 
+
+body { 
+
+    color: #000000; 
+
+} 
+
+ 
+ 
+
+.container { 
+
+    padding: 20px; 
+
+    text-align: center; 
+
+} 
+
+ 
+ 
+
+/* Estilos para o modo escuro */ 
+
+.dark-mode { 
+
+    background-color: #000000; 
+
+    color: #ffffff; 
+
+} 
+
+ 
+ 
+
+.dark-mode .container { 
+
+    border: 1px solid #ffffff; 
+
+} 
+
+ 
+ 
+
+/* Estilos para o botão de alternância */ 
+
+.switch { 
+
+    position: relative; 
+
+    display: inline-block; 
+
+    width: 50px; 
+
+    height: 25px; 
+
+} 
+
+ 
+ 
+
+.switch input { 
+
+    opacity: 0; 
+
+    width: 0; 
+
+    height: 0; 
+
+} 
+
+ 
+.dark-mode .modal-content {
+    background-color: #333; /* Cor de fundo do modal em modo escuro */
+    color: #fff; /* Cor do texto no modal em modo escuro */
+}
+ 
+/* Estilos para o modal em modo escuro */
+.dark-mode .popup-content {
+    background-color: #333; /* Cor de fundo do modal em modo escuro */
+    color: #fff; /* Cor do texto no modal em modo escuro */
+}
+.slider { 
+
+   position: absolute;  
+
+    cursor: pointer; 
+
+    top: 0; 
+
+    left: 0; 
+
+    right: 0; 
+
+    bottom: 0; 
+
+    background-color: #ccc; 
+
+    transition: .4s; 
+
+    border-radius: 35px; 
+
+} 
+
+ 
+ 
+
+.slider:before { 
+
+    position: absolute; 
+
+    content: ""; 
+
+    height: 27px; 
+
+    width: 27px; 
+
+    left: 0px; 
+
+    background-color: rgb(255, 255, 255); 
+
+    transition: .4s; 
+
+    border-radius: 50%; 
+
+} 
+
+ 
+ 
+ 
+ 
+
+input:checked+.slider { 
+
+    background-color: #55038C; 
+
+} 
+
+ 
+ 
+
+input:checked+.slider:before { 
+
+    transform: translateX(26px); 
+
+} 
+
+ 
+ 
+
+/* dark mode */ 
+
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+    background-color: #e2d9d9;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw; */
+}
+
+
+
+
+
+.login-container {
+    max-width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* position: absolute;  */
+    /* top: 55%;
+    left: 70%; */
+    /* transform: translate(-50%, -50%); */
+} 
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #55038C;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+    background-color: #F2AA52;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #E29438;
+}
+
+.login-form .signup-link {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #55038C;
+}
+
+#botao-avaliacao { 
+
+    background-color: #55038C; 
+
+    border: 1px solid #ffffff;  
+
+    color: #ffffff;  
+
+    padding: 10px 25px; 
+
+    text-align: center; 
+
+    display: inline-block; 
+
+    margin: 8px 4px;  
+
+    cursor: pointer; 
+
+    text-decoration: none; 
+
+    font-size: 15px; 
+
+} 
+
+#botao-avaliacao:hover { 
+
+    background-color: #d8a76c; 
+
+} 
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#left-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+#right-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+.login-container {
+    margin: 4%;
+
+    /* Adicione estilos adicionais conforme necessário */
+}
+
+@media screen and (max-width: 768px) {
+    #left-section,
+    #right-section {
+        max-width: 100%;
+    }
+}

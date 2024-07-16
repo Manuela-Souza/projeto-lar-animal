@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/doacoes.css">
+    <title>Pagina de Doações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+    </script>
+
+<div id="cabecalho">
+    <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+                <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                Lar Animal
+            </a>
+            <label class="switch" title="Ativar Modo Escuro">
+                <input id="modeToggle" type="checkbox">
+                <span class="slider round"></span>
+                <span id="modeText">Modo Claro</span><br>
+            </label>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                    <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                    <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                    <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+                </div>
+            </div>
+        </div>          
+    </nav>
+</div>
+
+    <header>
+        <h1>Ajude a Causa Animal!</h1>
+    </header>
+
+    <main>
+        <div id="container" style="display: flex; height: 100vh;">
+            <div id="left-section" style="flex: 1;">
+                <!-- Conteúdo do lado esquerdo - imagem visível apenas em telas médias ou maiores -->
+                <img src="img/doacao2.png" alt="" class="img-fluid d-none d-md-block" style="width: 100%;">
+            </div>
+            <div id="right-section" style="flex: 1;">
+                <!-- Seção de doação -->
+                <section class="donation-form mt-2" style="width: 80%; margin: 0 auto;">
+                    <h2>Faça uma Doação</h2>
+                    <form id="formulario-doacao" action="process_donation.php" method="POST">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+    
+                        <label for="amount">Valor da Doação:</label>
+                        <input type="number" id="amount" name="amount" min="1" required>
+    
+                        <button type="submit">Doar Agora</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    
+    <script src="js/doação.js"></script>
+
+
+    <script>
+        const toggleSwitch = document.getElementById('modeToggle');
+        const modeText = document.getElementById('modeText');
+    
+        toggleSwitch.addEventListener('change', switchTheme);
+    
+        function switchTheme() {
+            if (toggleSwitch.checked) {
+                document.body.classList.add('dark-mode');
+                modeText.innerText = 'Modo Escuro';
+            } else {
+                document.body.classList.remove('dark-mode');
+                modeText.innerText = 'Modo Claro';
+            }
+        }
+    </script>
+</body>
+</html>

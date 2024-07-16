@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/mapa.css">
+    <title>Mapa De Parceiros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+    </script>
+
+<div id="cabecalho">
+    <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+                <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                Lar Animal
+            </a>
+            <label class="switch" title="Ativar Modo Escuro">
+                <input id="modeToggle" type="checkbox">
+                <span class="slider round"></span>
+                <span id="modeText">Modo Claro</span><br>
+            </label>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                    <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                    <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                    <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+                </div>
+            </div>
+        </div>          
+    </nav>
+</div>
+    
+<div class="map-container">
+    <h1>Mapa De Clinicas </h1>
+    <div id="map" style="border-color: #55038C;"></div>
+</div>
+
+<div class="lista">
+    <h2>Lista de Locais</h2>
+    <ul>
+        <li style="background-color: #F2AA52; border-color: #55038C;">
+            <h3>Climev - Veterinário 24h - Clínica Veterinária</h3>
+            <p>Endereço: Rua A, 123</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=-19.9337286,-44.0691473" target="_blank" class="botao-maps">
+                <img src="https://www.gstatic.com/images/icons/material/system/2x/place_gm_blue_24dp.png" alt="Ícone do Google Maps"> Traçar Rota
+            </a>
+        </li>
+        <li style="background-color: #F2AA52; border-color: #55038C;">
+            <h3>Clínica Veterinária Terra dos Bichos</h3>
+            <p>Endereço: Avenida B, 456</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=-19.935337,-44.0534132" target="_blank" class="botao-maps">
+                <img src="https://www.gstatic.com/images/icons/material/system/2x/place_gm_blue_24dp.png" alt="Ícone do Google Maps"> Traçar Rota
+            </a>
+        </li>
+        <li style="background-color: #F2AA52; border-color: #55038C;">
+            <h3>Hospital Veterinário Pet</h3>
+            <p>Endereço: Praça C, 789</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=-19.9660055,-44.0617235" target="_blank" class="botao-maps">
+                <img src="https://www.gstatic.com/images/icons/material/system/2x/place_gm_blue_24dp.png" alt="Ícone do Google Maps"> Traçar Rota
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz6qkaFXhU9EHzDqjc7T19uQ8Zx8sm51E&callback=initMap" async defer></script>
+    <script src="js/mapa.js"></script>
+
+    <footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: relative; bottom: 0; left: 0; right: 0;"> 
+
+        <div> 
+    
+            <p>Gostou do nosso serviço? Avalie-nos!</p> 
+    
+                <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
+    
+                </span> 
+    
+                <div class="rodape"> 
+    
+                <div class="container"> 
+    
+                <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
+    
+        </div> 
+    
+    </footer> 
+    <script>
+        const toggleSwitch = document.getElementById('modeToggle');
+        const modeText = document.getElementById('modeText');
+    
+        toggleSwitch.addEventListener('change', switchTheme);
+    
+        function switchTheme() {
+            if (toggleSwitch.checked) {
+                document.body.classList.add('dark-mode');
+                modeText.innerText = 'Modo Escuro';
+            } else {
+                document.body.classList.remove('dark-mode');
+                modeText.innerText = 'Modo Claro';
+            }
+        }
+    </script>
+
+</body>
+</html>

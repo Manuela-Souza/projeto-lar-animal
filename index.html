@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/homepage.css">
+    <title>Lar Animal Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .carousel-control-prev-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+
+        .carousel-control-next-icon {
+           background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+    </script>
+
+
+<div id="cabecalho">
+    <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+                <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                Lar Animal
+            </a>
+            <label class="switch" title="Ativar Modo Escuro">
+                <input id="modeToggle" type="checkbox">
+                <span class="slider round"></span>
+                <span id="modeText">Modo Claro</span><br>
+            </label>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                    <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                    <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                    <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+                </div>
+            </div>
+        </div>          
+    </nav>
+</div>
+
+ 
+        <article class="carrousel">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="sobre.html">
+                            <img src="img/Capa.jpg" class="d-block w-100" alt="Imagem 1">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="parceiros.html">
+                            <img src="img/parceiros.jpg" class="d-block w-100" alt="Imagem 2">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="mapa.html">
+                            <img src="img/clinicasprox.jpg" class="d-block w-100" alt="Imagem 2">
+                        </a>
+                    </div>
+
+                 
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script>
+            $(document).ready(function () {
+                $('.carousel').carousel();
+            });
+        </script>
+
+<div class="button-container" style="text-align: center;">
+    <a href="adocao.html" class="button adopt-button" style="text-decoration: none; display: block; margin-bottom: 10px;">
+        Quero Adotar
+    </a>
+    <a href="doacoes.html" id="cadastrarAnimalBtn" class="button register-button" style="color: #55038C; text-decoration: none; display: block;">
+        Quero Contribuir
+    </a>
+</div>
+
+
+
+<script>
+    document.getElementById('cadastrarAnimalBtn').addEventListener('click', function() {
+        // Abra o modal correspondente
+        var modal = new bootstrap.Modal(document.getElementById('novoPetModal'), {
+            backdrop: 'static'
+        });
+        modal.show();
+    });
+
+    const toggleSwitch = document.getElementById('modeToggle');
+const modeText = document.getElementById('modeText');
+
+toggleSwitch.addEventListener('change', switchTheme);
+
+function switchTheme() {
+    if (toggleSwitch.checked) {
+        document.body.classList.add('dark-mode');
+        modeText.innerText = 'Modo Escuro';
+    } else {
+        document.body.classList.remove('dark-mode');
+        modeText.innerText = 'Modo Claro';
+    }
+}
+
+</script>
+
+
+    </body>
+    
+    </html>
+
+            <article class="about">
+               
+                <div>
+                    <iframe width="400" height="400" src="https://www.youtube.com/embed/m-Gtu7C93_Y?controls=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h5 class="card-title" style="color: #55038C;"><br><strong>QUEM SOMOS?</strong> </h5>
+                    <p class="card-text">
+                        Nosso projeto LAR ANIMAL tem como objetivo criar uma aplicação web onde ONGs e grupos
+                        protetores possam se cadastrar para servirem como ponto de resgate para animais e
+                        tutores em situação de vulnerabilidade e onde possíveis tutores possam entrar para dar um
+                        novo lar a esses animais. 
+                        Além de criar uma ponte de ajuda mútua entre ONGs, grupos
+                        solidários e voluntários que queiram auxiliar tanto animais quanto tutores carentes,
+                        disponibilizando desde informações sobre como fazer a abordagem certa a animais
+                        abandonados para resgate até locais que oferecem atendimento veterinário gratuito e/ou a
+                        preço social.
+                    </p>
+                </div>
+            
+            </article>
+        </article>
+
+    </section>
+
+    <div class="cardsection">
+
+        <div class="container">
+            <div class=" row">
+                <div class="col-12 pt-3 pb-3">
+                    <h2 style="color: #55038C;"><strong>Principais Serviços</strong></h2>
+                </div>
+        
+                <div class="servicos col-12 col-md-3 pt-3">
+                    <a href="forum.html" class="text-decoration-none text-dark card-link">
+                        <img src="img/conversa.png" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title" style="color: #F2AA52;"><br><strong>Fóruns</strong></h5>
+                    </a>
+                </div>
+        
+                <div class="servicos col-12 col-md-3 pt-3">
+                    <a href="adocao.html" class="text-decoration-none text-dark card-link">
+                        <img src="./img/adocao.png" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title" style="color: #F2AA52;"><br><strong>Adoção</strong></h5>
+                    </a>
+                </div>
+        
+                <div class="servicos col-12 col-md-3 pt-3">
+                    <a href="voluntario.html" class="text-decoration-none text-dark card-link">
+                        <img src="img/voluntario1-adoção.png" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title" style="color: #F2AA52;"><br><strong>Voluntariado</strong></h5>
+                    </a>
+                </div>
+                <div class="servicos col-12 col-md-3 pt-3">
+                    <a href="agendamentos.html" class="text-decoration-none text-dark card-link">
+                        <img src="img/clinica3.png" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title" style="color: #F2AA52;"><br><strong>Agendamento De Consulta</strong></h5>
+                    </a>
+                </div>
+        
+           
+            
+
+                <div class="historia row pt-5 pb-3">
+                    <h2 style="color: #55038C;"><strong>Histórias de Sucesso</strong></h2>
+
+                    <div class="texto col-12 col-md-3 pt-3">
+                        <img src="./img/filhote1.jpg" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none text-dark card-link"
+                                style="color: #F2AA52;"><br><strong>Corolino</strong></a></h5>
+                        <p class="card-text">
+                            Carolino foi resgatado de um lar abusivo em um sítio, onde ele e seus irmãos sofriam maus
+                            tratos e vivam em situação precarias. Após ser resgatado pela ONG Meu Pet Minha Vida, foi
+                            adotado por um lar responsável onde vive feliz e saudável com sua nova família.
+                        </p>
+                    </div>
+
+                    <div class="texto col-12 col-md-3 pt-3">
+                        <img src="./img/filhote2.jpg" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none text-dark card-link"
+                                style="color: #F2AA52;"><br><strong>Senhor Pipo</strong></a></h5>
+                        <p class="card-text">
+                            Senhor Pipo, foi abandonado em uma caixa de papelão junto de sua família próximo a
+                            uma igreja onde foi resgatado pelo grupo protetor Pata amiga. Eles foram postos
+                            para a adoção em uma feira da prefeitura de Contagem e hoje é mascote
+                            de uma clínica veterinária.
+                        </p>
+                    </div>
+                    <div class="texto col-12 col-md-3 pt-3">
+                        <img src="./img/filhote_crianca.jpg" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none text-dark card-link"
+                                style="color: #F2AA52;"><br><strong>Pudim</strong></a></h5>
+                        <p class="card-text">
+                            Pudim foi abandonado na rua, e ficou
+                            vagando pelas ruas da grande BH onde sofria maus tratos até ser resgatado e
+                            posteriormente adoatado por Frederico e sua família. Agora Pudim vive feliz com sua
+                            nova família fazendo compania para Lucas, o filho do casal.
+                        </p>
+                    </div>
+                    <div class="texto col-12 col-md-3 pt-3">
+                        <img src="./img/gato_crianca.jpg" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none text-dark card-link"
+                                style="color: #F2AA52;"><br><strong>Jujuba</strong></a></h5>
+                        <p class="card-text">
+                            Jujuba era uma gata de rua que após ser atropelada foi resgatada pela Ong Ampara Animal, foi
+                            trata e adotada por um dos voluntários mirins que participam em uma parceria da ONG com as
+                            escolas da região metropolitana de BH
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<br>
+
+
+
+<footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: relative; bottom: 0; left: 0; right: 0;"> 
+
+    <div> 
+
+        <p>Gostou do nosso serviço? Avalie-nos!</p> 
+
+            <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
+
+            </span> 
+
+            <div class="rodape"> 
+
+            <div class="container"> 
+
+            <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
+         
+    </div> 
+
+</footer> 
+
+</body>
+
+</html>

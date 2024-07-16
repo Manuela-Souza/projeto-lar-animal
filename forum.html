@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/forum.css">
+    <script src="js/forum.js"></script>
+
+    <title>Fórum de Discussão</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+
+
+<div id="cabecalho">
+    <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+                <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                Lar Animal
+            </a>
+            <label class="switch" title="Ativar Modo Escuro">
+                <input id="modeToggle" type="checkbox">
+                <span class="slider round"></span>
+                <span id="modeText">Modo Claro</span><br>
+            </label>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                    <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                    <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                    <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+                </div>
+            </div>
+        </div>          
+    </nav>
+</div>
+
+    <!--Conteúdo do fórum-->
+    <div id="forum-container" class="container">
+        <div class="row">
+            <!-- Barra lateral esquerda -->
+            <div class="col-md-3">
+                <div class="user-sidebar mt-4 mb-4">
+                    <!-- Adicione a foto do usuário logado aqui -->
+                    <img src="https://i.pravatar.cc/150" alt="User Avatar" class="user-avatar-sidebar">
+                    <div class="user-info">
+                        <p>Nome do Usuário</p>
+                        <p>Email@example.com</p>
+                    </div>
+                </div>
+
+                <!-- Principais comentários -->
+                <div class="main-comments mt-4">
+                    <h4>Principais Comentários</h4>
+                    <!-- Adicione os principais comentários dinamicamente aqui -->
+                    <ul id="main-comments-list">
+                        <!-- Exemplo de item de comentário -->
+                        <!-- <li>Comentário 1</li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Área principal do fórum -->
+            <div class="col-md-9">
+                <h1 class="mt-5 mb-4">Fórum de Discussão</h1>
+
+                <!-- Carrossel de Comentários -->
+                <div id="comment-carousel" class="carousel slide mb-4" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Os comentários serão inseridos aqui dinamicamente -->
+                    </div>
+                    <a class="carousel-control-prev" href="#comment-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#comment-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
+
+                <!-- Lista de Posts -->
+                <div id="post-list">
+                    <!-- Os posts serão inseridos aqui dinamicamente -->
+                </div>
+
+                <!-- Formulário para Novo Post -->
+                <form id="post-form" class="mt-4">
+                    <h2>Novo Post</h2>
+                    <div class="form-group">
+                        <label for="username">Nome de Usuário:</label>
+                        <input type="text" id="username" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-content">Conteúdo do Post:</label>
+                        <textarea id="post-content" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Postar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup para Foto do Usuário -->
+    <div id="user-popup" class="popup">
+        <div class="carousel">
+            <!-- Imagens do carrossel serão inseridas aqui dinamicamente -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: absolute; bottom: 0; left: 0; right: 0;"> 
+
+    <div> 
+
+        <p>Gostou do nosso serviço? Avalie-nos!</p> 
+
+            <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
+
+            </span> 
+
+            <div class="rodape"> 
+
+            <div class="container"> 
+
+            <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
+         
+    </div> 
+
+</footer> 
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Seu JavaScript personalizado aqui -->
+
+    <script>
+        // Função para gerar um número aleatório entre min e max
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        const posts = [];
+
+        function renderPosts() {
+            const postList = document.getElementById('post-list');
+            postList.innerHTML = '';
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post', 'p-3', 'bg-light');
+
+                const userAvatar = post.avatar ? `<img src="${post.avatar}" alt="Avatar" class="user-avatar" onclick="showPopup('${post.avatar}')">` : '';
+                
+                postElement.innerHTML = `
+                    ${userAvatar}
+                    <strong>${post.username}</strong>: ${post.message}
+                `;
+                postList.appendChild(postElement);
+            });
+        }
+
+        function showPopup(avatarUrl) {
+            const popup = document.getElementById('user-popup');
+            const carousel = popup.querySelector('.carousel');
+            carousel.innerHTML = ''; // Limpa qualquer imagem existente no carrossel
+
+            // Adiciona uma imagem ao carrossel para cada post com avatar
+            posts.forEach(post => {
+                if (post.avatar) {
+                    const carouselItem = document.createElement('div');
+                    carouselItem.classList.add('carousel-item');
+
+                    const img = document.createElement('img');
+                    img.src = post.avatar;
+                    img.alt = 'Avatar';
+                    img.classList.add('d-block', 'w-100');
+
+                    carouselItem.appendChild(img);
+                    carousel.appendChild(carouselItem);
+                }
+            });
+
+            popup.style.display = 'block';
+        }
+
+        function hidePopup() {
+            const popup = document.getElementById('user-popup');
+            popup.style.display = 'none';
+        }
+
+        function renderCommentsCarousel() {
+            const carouselInner = document.querySelector('#comment-carousel .carousel-inner');
+            carouselInner.innerHTML = '';
+
+            // Adiciona cada comentário como um item de carrossel
+            posts.forEach((post, index) => {
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('carousel-item', index === 0 ? 'active' : '');
+                commentElement.innerHTML = `
+                    <h3>${post.username}</h3>
+                    <p>${post.message}</p>
+                `;
+                carouselInner.appendChild(commentElement);
+            });
+        }
+
+        function renderUserSidebar() {
+            const userSidebar = document.querySelector('.user-sidebar');
+            // Adicione o código para exibir a foto do usuário e outras informações relevantes aqui
+        }
+
+        function renderMainComments() {
+            const mainCommentsList = document.getElementById('main-comments-list');
+            // Adicione o código para exibir os principais comentários dinamicamente aqui
+        }
+
+        document.getElementById('post-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const message = document.getElementById('post-content').value;
+            const avatarNumber = getRandomNumber(1, 5); // Gera um número aleatório entre 1 e 5 para escolher a imagem do avatar
+            const avatar = `https://i.pravatar.cc/150?img=${avatarNumber}`; // Usa o serviço Pravatar para imagens de avatar aleatórias
+            posts.push({ username, message, avatar });
+            renderPosts();
+            renderCommentsCarousel();
+            document.getElementById('username').value = '';
+            document.getElementById('post-content').value = '';
+        });
+
+        
+        renderPosts();
+        renderCommentsCarousel();
+        renderUserSidebar();
+        renderMainComments();
+    </script>
+
+
+
+
+
+</body>
+
+</html>
